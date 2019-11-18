@@ -4,7 +4,7 @@ require 'vendor/autoload.php';
 	$sdk = new Aws\Sns\SnsClient([
 		'region'  => 'ap-southeast-1',
 		'version' => 'latest',
-		'credentials' => ['key' => 'AKIA6FGFUGLZUHFCHHDR', 'secret' => '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']
+		'credentials' => ['key' => 'Key', 'secret' => 'Password']
 	]);
 	$result1 = $sdk->SetSMSAttributes([
         'attributes' => [
@@ -13,7 +13,7 @@ require 'vendor/autoload.php';
     ]);
 $result = $sdk->publish([
     'Message' => 'Your Message',
-    'PhoneNumber' => '+919824618237',
+    'PhoneNumber' => 'Phone number',
     'MessageAttributes' => ['AWS.SNS.SMS.SenderID' => [
          'DataType' => 'String',
          'StringValue' => 'WebNiraj'
